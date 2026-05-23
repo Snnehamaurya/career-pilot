@@ -31,13 +31,27 @@ const [pollOptions, setPollOptions] = useState([
   ''
 ]);
 
-  const buildPostData = () => ({
+  const buildPostData = () => {
+  const validOptions = pollOptions.filter(
+    option => option.trim() !== ""
+  );
+
+  return {
     title: title.trim(),
     content: content.trim(),
     category,
     tags: tags.split(',').map(t => t.trim()).filter(Boolean),
+
+    ...(showPoll && {
+      poll: {
+        question: pollQuestion.trim(),
+        options: validOptions
+      }
+    }),
+
     ...(scheduledAt && { scheduledAt })
-  });
+  };
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
