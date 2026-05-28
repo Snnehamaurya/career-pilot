@@ -1,3 +1,10 @@
+# [1.73.0](https://github.com/anurag3407/career-pilot/compare/v1.72.0...v1.73.0) (2026-05-28)
+
+
+### Features
+
+* complete Dark Mesh Gradient portfolio template ([36fa001](https://github.com/anurag3407/career-pilot/commit/36fa001260fce7be0aed0378479ec5a597886e05))
+
 # [1.72.0](https://github.com/anurag3407/career-pilot/compare/v1.71.0...v1.72.0) (2026-05-28)
 
 
